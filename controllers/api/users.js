@@ -26,9 +26,9 @@ async function login(req, res) {
   }
 }
 
-module.exports = {
-  create,
-  login
+function checkToken(req, res){
+  console.log('req.user ---->', req.user)
+  res.json(req.exp);
 }
 
 function createJWT(user){
@@ -37,4 +37,10 @@ function createJWT(user){
     process.env.SECRET,
     { expiresIn: '24h' }
   );
+}
+
+module.exports = {
+  create,
+  login,
+  checkToken,
 }
