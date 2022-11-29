@@ -2,6 +2,8 @@
 require("dotenv").config();
 require("./config/database");
 
+const User = require("./models/user");
+
 // Require the Mongoose models
 // const User = require('./models/user');
 // const Item = require('./models/item');

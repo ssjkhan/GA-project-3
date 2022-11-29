@@ -20,6 +20,7 @@ export class SignUpForm extends Component {
 
       console.log(formData)
       const user = await signUp(formData) 
+      console.log(user)
     } catch(error) {
       console.log(error)
       this.setState({ error: "Sign Up Failed - Try Again" });
